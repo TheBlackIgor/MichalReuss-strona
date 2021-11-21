@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wisielec</title>
+    <script src="script.js" defer></script>
+    <link rel="shortcut icon" href="./PNG/11.png">
+</head>
+<body onload="newGame()">
+    <p id="endGame" class="endGame"></p>
+    <div class="first-row">
+        <div></div>
+        <div class="wisielec" id="wisielec"></div>
+        <div></div>
+    </div>
+    <div class="slowo" ><p id="slowo"></p></div>
+   <div class="inputs">
+        <div class="input">
+            <p>Letter</p>
+            <div>
+                <input type="text" id="letter" maxlength="1">
+            </div>
+        <button class="pick" id="pick" onclick="pick()">Confirm</button>
+    </div>
+        <div style="padding-left: 3px;" class="input">
+            <p>Word</p>
+            <div>
+                <input type="text" id="word">
+            </div>
+        <button class="pick" id="pickWord" onclick="pickWord()">Confirm</button>
+    </div>
+   </div>
+    <button class="btn-newgame" id="btn-newgame" onclick="newGame()">New Game</button>
+    <p>Wrong guesses:</p>
+    <p id="wrongGuess"></p>
+    <script>
+           
+    </script>
+</body>
+</html>
