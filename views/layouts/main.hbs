@@ -38,6 +38,34 @@
     </div>
     {{{body}}}
 
+
+<script>
+    function getCookies(name,currentTheme){
+        const cookies = document.cookie;
+        let split = cookies.split(";")
+        split.forEach(x=>{
+            const help = x.split(";")
+            if(help[0] == name)return help[1] 
+        })
+        return currentTheme
+    }
+    let body = document.querySelector('body')
+    let dayNight = document.querySelector('.dayNight')
+    let theme = {{variable}}
+    theme = getCookies("theme",theme)
+    dayNight.addEventListener('click', () => {
+        body.classList.toggle('dark')
+        dayNight.classList.toggle('active')
+        theme =! theme
+        document.cookie = `theme=${theme};max-age=24920000`
+
+    })
+    if(!theme){
+        dayNight.click();
+        theme =! theme
+    }
+    
+</script>
 </body>
 
 </html>

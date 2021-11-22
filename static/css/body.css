@@ -19,8 +19,7 @@ main{
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    color: #ccc;
-    margin-top: 100px;
+    color: white;
 }
 .alpha{
     left: 0;
@@ -35,7 +34,8 @@ main{
     height: 300px;
     width: 0px;
     margin: 20px;
-    border-right: 1px solid white;
+    border-right: 2px solid white;
+    z-index: 100;
 }
 .name{
     z-index: 100;
