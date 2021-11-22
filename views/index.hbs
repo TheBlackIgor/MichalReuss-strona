@@ -1,5 +1,5 @@
 <div class="main center">
-    <div class="bg">
+    <div class="bg" onload="changeBgImage()">
         <div class="name center">
             <h1>Michał Reuss</h1>
         </div>
@@ -11,11 +11,29 @@
         <div class="alpha"></div>
     </div>
 </div>
-<div class="options">
+<div class="options center">
     <h2 class="center">Options</h2>
-    <div class="center options-list">
-        <h4 class="center">Gallery</h4>
-        <h4 class="center">Contact</h4>
-        <h4 class="center">About me</h4>
+    <div class="options-list">
+        <h4><a href="/">Gallery</a></h4>
+        <h4><a href="/">Contact</a></h4>
+        <h4><a href="/">About me</a></h4>
     </div>
 </div>
+<script>
+    const bg = document.querySelector('#bg')
+    let bgTab = []
+    let imC = 0
+
+    function changeBgImage() {
+        if (bgTab.lenght == imC) {
+            imC = 0
+            bg.style.backgroundImage = "../static/gfx/" + bgTab[imC];
+            imC++
+        } else {
+            bg.style.backgroundImage = "../static/gfx/" + bgTab[imC];
+            imC++
+        }
+        setTimeout(changeBgImage, 1000)
+    }
+
+</script>
