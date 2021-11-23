@@ -8,6 +8,7 @@ const PORT = 5000;
 const fs = require('fs')
 
 var bgImages = fs.readdirSync('./static/gfx/main-bg/');
+console.log(typeof bgImages[2])
 
 app.set('view engine', 'hbs');
 app.use(express.urlencoded({
@@ -40,7 +41,7 @@ app.get("/", function (req, res) {
     } else {
         theme = req.cookies.theme
     }
-    res.render('index.hbs', { variable: theme, bgImages: bgImages });
+    res.render('index.hbs', { theme: theme, bgImages });
 })
 
 //  npm install express

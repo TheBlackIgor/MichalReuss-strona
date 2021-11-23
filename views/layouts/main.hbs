@@ -38,7 +38,16 @@
     </div>
     {{{body}}}
     <footer>
-        <div></div>
+        <div class="border-top"></div>
+        <div class="footer-content">
+            <div class="left-footer footer-padding"></div>
+            <div class="left-center footer-padding">
+                adresss@mail.com
+            </div>
+            <div class="right-footer footer-padding">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </div>
+        </div>
     </footer>
 
 
@@ -54,7 +63,7 @@
         }
         let body = document.querySelector('body')
         let dayNight = document.querySelector('.dayNight')
-        let theme = {{ variable }}
+        let theme = {{ theme }}
         theme = getCookies("theme", theme)
 
         dayNight.addEventListener('click', () => {

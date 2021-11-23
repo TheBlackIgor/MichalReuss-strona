@@ -20,20 +20,22 @@
     </div>
 </div>
 <script>
-    const bg = document.querySelector('#bg')
-    let bgTab = {{ bgImages }}
+    const bg = document.querySelector('.bg')
+    let bgTab = "{{{bgImages}}}".split(',')
     let imC = 0
-
-    function changeBgImage() {
-        if (bgTab.lenght == imC) {
+    
+    window.onload = function changeBgImage() {
+        console.log('wywołanie')
+        if (bgTab.length-1 == imC) {
             imC = 0
-            bg.style.backgroundImage = "../static/gfx/" + bgTab[imC];
+            bg.style.backgroundImage = 'url("../gfx/main-bg/'+bgTab[imC]+'")';
             imC++
         } else {
-            bg.style.backgroundImage = "../static/gfx/" + bgTab[imC];
+            bg.style.backgroundImage = 'url("../gfx/main-bg/'+bgTab[imC]+'")';
+            console.log()
             imC++
         }
-        setTimeout(changeBgImage, 1000)
+        setTimeout(changeBgImage, 8000)
     }
 
 </script>
