@@ -43,3 +43,7 @@ app.get("/", function (req, res) {
     res.render('index.hbs', { variable: theme, bgImages: bgImages });
 })
 
+//  npm install express
+//  npm install express-handlebars@5.3.5
+//  npm install cookie-parser
+
