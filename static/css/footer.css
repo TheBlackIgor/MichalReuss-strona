@@ -1,4 +1,5 @@
 footer{
+    position: absolute;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,9 +7,10 @@ footer{
     align-items: center;
     height: auto;
     color: var(--dark);
+    background-color: var(--white);
 }
 
-.border-top{
+.footer-top{
     width: 300px;
     border-top: 1px solid var(--dark);
 }
@@ -25,8 +27,11 @@ footer{
     
 }
 .right-footer{
-
+    font-size: 30px;
 }
 .footer-padding{
     padding: 50px;
+}
+.footer-bottom{
+    font-size: 0.8em;
 }

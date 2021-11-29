@@ -1,0 +1,5 @@
+.gallery{
+    margin: 200px 0;
+    flex-wrap: wrap;
+    flex-direction: column;
+}

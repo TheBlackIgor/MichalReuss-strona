@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "michalreuss-strona",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheBlackIgor/MichalReuss-strona.git"
+  },
+  "author": "Igor Świerczyński",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheBlackIgor/MichalReuss-strona/issues"
+  },
+  "homepage": "https://github.com/TheBlackIgor/MichalReuss-strona#readme",
+  "description": ""
+}

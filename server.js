@@ -8,7 +8,7 @@ const PORT = 5000;
 const fs = require('fs')
 
 var bgImages = fs.readdirSync('./static/gfx/main-bg/');
-console.log(typeof bgImages[2])
+var gallery = fs.readdirSync('./static/gfx/gallery/')
 
 app.set('view engine', 'hbs');
 app.use(express.urlencoded({
@@ -41,10 +41,20 @@ app.get("/", function (req, res) {
     } else {
         theme = req.cookies.theme
     }
-    res.render('index.hbs', { theme: theme, bgImages });
+    res.render('index.hbs', { theme, bgImages });
+})
+app.get("/gallery", function (req, res) {
+    let theme;
+    if (req.cookies.theme == null) {
+        theme = true
+        res.cookie("theme", true, { maxAge: 24920000 })
+    } else {
+        theme = req.cookies.theme
+    }
+    res.render('galeria.hbs', { theme, gallery });
 })
 
 //  npm install express
 //  npm install express-handlebars@5.3.5
-//  npm install cookie-parser
+//  npm install cookie-parser 
 

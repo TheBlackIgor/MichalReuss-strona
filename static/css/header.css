@@ -19,9 +19,6 @@ header{
 a{
     text-decoration: none;
 }
-body{
-   height:1000px;
-}
 header .logo{
     position: relative;
     display: inline-flex;

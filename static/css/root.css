@@ -1,5 +1,6 @@
 :root{
-    --white:#fff;
-    --dark:#333;
+    --white:#ddd;
+    --dark:#222;
     --buttonBg:#ccc;
+    --body:#fff;
 }
