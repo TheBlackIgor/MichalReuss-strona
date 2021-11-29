@@ -4,7 +4,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const fs = require('fs')
 
 var bgImages = fs.readdirSync('./static/gfx/main-bg/');
