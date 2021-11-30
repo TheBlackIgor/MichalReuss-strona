@@ -8,7 +8,7 @@ header{
     padding: 40px 100px;
     z-index: 1000000;
     background-color: var(--white);
-    transition: all 0.4s ease;
+    transition: all 0.6s ease;
 
     user-select: none; /* supported by Chrome and Opera */
    -webkit-user-select: none; /* Safari */
