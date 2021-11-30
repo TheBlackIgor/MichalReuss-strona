@@ -1,9 +1,6 @@
 body{
     background-color: var(--body);
 }
-main{
-    font-size: 20px;
-}
 .main{
     top: 0;
     left: 0;

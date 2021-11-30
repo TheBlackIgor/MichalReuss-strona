@@ -1,0 +1,18 @@
+.name{
+    padding-left: 25%;
+    padding-right: auto;
+    font-size: 0.8em;
+}
+.footer-padding{
+    padding:20px;
+}
+/* normal desktop styles */ 
+@media only screen  and (max-device-width: 1000px) and (orientation: portrait)
+ {
+
+ } 
+ /* styles for smartphones and tablets in portrait mode */ 
+ @media only screen  and (max-device-width: 500px) and (orientation: landscape)
+  {
+    
+  } /* styles for smartphones and tablets in landscape mode */

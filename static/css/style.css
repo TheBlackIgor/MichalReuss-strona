@@ -13,6 +13,7 @@
 body{
     transition: all 0.2s;
     color: var(--dark);
+    position: relative;
 }
 .dark{
     --white:#222;
