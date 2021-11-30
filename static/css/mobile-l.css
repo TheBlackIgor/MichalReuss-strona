@@ -6,6 +6,11 @@
 .footer-padding{
     padding:20px;
 }
+.name{
+    font-size: 0.7em;
+    padding-right: 30px;
+    padding-left: 20px;
+}
 /* normal desktop styles */ 
 @media only screen  and (max-device-width: 1000px) and (orientation: portrait)
  {
