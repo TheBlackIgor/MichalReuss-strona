@@ -1,13 +1,14 @@
 <div class="center">
-    <div class="center gallery">
+    <form class="center gallery">
         <h2>Galeria</h2>
         <div class="listOfSession">
             {{#each gallery}}
             <div class="session" style="background-image:url('');">
-                <img src="{{{./avatar}}}" alt="">
-                <a href="/gallery/{{{./topic}}}">{{{./topic}}}</a>
+                {{!-- <img src="" alt=""> --}}
+                <button style="background-image:url('{{{./avatar}}}');" formaction="/gallery/{{{./topic}}}"
+                    name="session" value="{{@key}}">{{./topic}}</button>
             </div>
             {{/each}}
         </div>
-    </div>
+    </form>
 </div>
