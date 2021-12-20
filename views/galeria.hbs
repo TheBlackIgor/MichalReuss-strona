@@ -1,9 +1,12 @@
 <div class="center">
     <div class="center gallery">
         <h2>Galeria</h2>
-        <div class="list-of-links">
+        <div class="listOfSession">
             {{#each gallery}}
-            <div>{{.}}</div>
+            <div class="session" style="background-image:url('');">
+                <img src="{{{./avatar}}}" alt="">
+                <a href="/gallery/{{{./topic}}}">{{{./topic}}}</a>
+            </div>
             {{/each}}
         </div>
     </div>

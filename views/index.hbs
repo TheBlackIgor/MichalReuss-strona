@@ -12,9 +12,9 @@
     </div>
 </div>
 <div class="options center">
-    <h2 class="center">Options</h2>
+    <h2 class="center">Go to:</h2>
     <div class="options-list">
-        <h4><a href="/">Gallery</a></h4>
+        <h4><a href="/gallery">Gallery</a></h4>
         <h4><a href="/">Contact</a></h4>
         <h4><a href="/">About me</a></h4>
     </div>
@@ -23,15 +23,15 @@
     const bg = document.querySelector('.bg')
     let bgTab = "{{{bgImages}}}".split(',')
     let imC = 0
-    
+
     window.onload = function changeBgImage() {
         console.log('wywołanie')
-        if (bgTab.length-1 == imC) {
+        if (bgTab.length - 1 == imC) {
             imC = 0
-            bg.style.backgroundImage = 'url("../gfx/main-bg/'+bgTab[imC]+'")';
+            bg.style.backgroundImage = 'url("../gfx/main-bg/' + bgTab[imC] + '")';
             imC++
         } else {
-            bg.style.backgroundImage = 'url("../gfx/main-bg/'+bgTab[imC]+'")';
+            bg.style.backgroundImage = 'url("../gfx/main-bg/' + bgTab[imC] + '")';
             console.log()
             imC++
         }

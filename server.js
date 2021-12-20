@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const fs = require('fs')
+const data = require('./static/gfx/gfx.json')
 
 var bgImages = fs.readdirSync('./static/gfx/main-bg/');
 var gallery = fs.readdirSync('./static/gfx/gallery/')
@@ -51,7 +52,7 @@ app.get("/gallery", function (req, res) {
     } else {
         theme = req.cookies.theme
     }
-    res.render('galeria.hbs', { theme, gallery });
+    res.render('galeria.hbs', { theme, gallery: data.gallery });
 })
 
 //  npm install express

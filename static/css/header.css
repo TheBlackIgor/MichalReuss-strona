@@ -28,6 +28,13 @@ header .logo{
     font-weight: 700;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    background-image: url('../gfx/icon.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
 }
 .rightSide{
     display: flex;
