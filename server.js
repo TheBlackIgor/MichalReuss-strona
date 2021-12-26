@@ -4,9 +4,11 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const fs = require('fs')
 const data = require('./static/gfx/gfx.json')
+
+app.use(express.static('static'))
 
 var bgImages = fs.readdirSync('./static/gfx/main-bg/');
 var gallery = fs.readdirSync('./static/gfx/gallery/')
@@ -75,7 +77,7 @@ app.get("/aboutMe", function (req, res) {
     res.render('aboutMe.hbs', { theme });
 })
 
-app.get("/gallery/:session", function (req, res) {
+app.get("/:session", function (req, res) {
     let theme;
     if (req.cookies.theme == null) {
         theme = true

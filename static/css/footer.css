@@ -6,7 +6,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 120px;
     color: var(--dark);
     background-color: var(--white);
     margin-bottom: -100px;

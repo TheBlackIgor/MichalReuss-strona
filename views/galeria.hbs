@@ -5,8 +5,8 @@
             {{#each gallery}}
             <div class="session" style="background-image:url('');">
                 {{!-- <img src="" alt=""> --}}
-                <button style="background-image:url('{{{./avatar}}}');" formaction="/gallery/{{{./topic}}}"
-                    name="session" value="{{@key}}">{{./topic}}</button>
+                <button style="background-image:url('{{{./avatar}}}');" formaction="/{{{./topic}}}" name="session"
+                    value="{{@key}}">{{./topic}}</button>
             </div>
             {{/each}}
         </div>

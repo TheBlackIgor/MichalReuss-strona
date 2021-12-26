@@ -7,13 +7,22 @@ header{
     padding-right: auto;
     font-size: 0.8em;
 }
-.footer-padding{
+/* .footer-padding{
     padding:20px;
-}
+} */
 .name{
     font-size: 0.7em;
     padding-right: 30px;
     padding-left: 20px;
+}
+.contactContent{
+    flex-direction: column;
+    padding: 150px 10px 50px 10px;
+    height: auto;
+}
+.meinPhoto{
+    margin-top: 50px;
+    margin-left: 0;
 }
 /* normal desktop styles */ 
 @media only screen  and (max-device-width: 1000px) and (orientation: portrait)
