@@ -1,1 +1,11 @@
-<P>hiello</P>
+<div class="photosContent">
+    <h2>{{{title}}}</h2>
+    <div class="photos">
+        {{#each photos}}
+        <div class="photo">
+            <a href="/gfx/gallery/{{../title}}v/{{.}}"></a>
+            <img src="/gfx/gallery/{{../title}}/{{.}}" alt="">
+        </div>
+        {{/each}}
+    </div>
+</div>

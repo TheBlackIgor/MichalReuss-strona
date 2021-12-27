@@ -56,16 +56,7 @@ app.get("/gallery", function (req, res) {
     }
     res.render('galeria.hbs', { theme, gallery: data.gallery });
 })
-app.get("/contact", function (req, res) {
-    let theme;
-    if (req.cookies.theme == null) {
-        theme = true
-        res.cookie("theme", true, { maxAge: 24920000 })
-    } else {
-        theme = req.cookies.theme
-    }
-    res.render('contact.hbs', { theme });
-})
+
 app.get("/aboutMe", function (req, res) {
     let theme;
     if (req.cookies.theme == null) {
@@ -74,22 +65,23 @@ app.get("/aboutMe", function (req, res) {
     } else {
         theme = req.cookies.theme
     }
-    res.render('aboutMe.hbs', { theme });
+    res.render('oMnie.hbs', { theme });
 })
 
 app.get("/:session", function (req, res) {
     let theme;
+    const session = req.params.session
     if (req.cookies.theme == null) {
         theme = true
         res.cookie("theme", true, { maxAge: 24920000 })
     } else {
         theme = req.cookies.theme
     }
+    var photos = fs.readdirSync('./static/gfx/gallery/' + session)
 
-
-    const session = req.params.session
     console.log(session)
-    res.render('session.hbs', { theme });
+
+    res.render('session.hbs', { theme, photos: photos, title: session });
 })
 
 //  npm install express
