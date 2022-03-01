@@ -24,14 +24,12 @@
     let imC = 0
 
     window.onload = function changeBgImage() {
-        console.log('wywołanie')
         if (bgTab.length - 1 == imC) {
-            imC = 0
             bg.style.backgroundImage = 'url("../gfx/main-bg/' + bgTab[imC] + '")';
+            imC = 0
             imC++
         } else {
             bg.style.backgroundImage = 'url("../gfx/main-bg/' + bgTab[imC] + '")';
-            console.log()
             imC++
         }
         setTimeout(changeBgImage, 8000)
