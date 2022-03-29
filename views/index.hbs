@@ -8,6 +8,7 @@
             <h4>Hi, I'm Michał and I'm 16, as a hobby I'm a photographer and on
                 this site you are able to see some of my work. Enjoy </h4>
         </div>
+        <div id="slider" class="slider"></div>
         <div class="alpha"></div>
     </div>
 </div>
@@ -22,19 +23,25 @@
     const bg = document.querySelector('.bg')
     let bgTab = "{{{bgImages}}}".split(',')
     let imC = 0
+    let appended = 0
 
-    window.onload = function changeBgImage() {
-        console.log('wywołanie')
-        if (bgTab.length - 1 == imC) {
-            imC = 0
-            bg.style.backgroundImage = 'url("../gfx/main-bg/' + bgTab[imC] + '")';
-            imC++
-        } else {
-            bg.style.backgroundImage = 'url("../gfx/main-bg/' + bgTab[imC] + '")';
-            console.log()
-            imC++
+    window.onload = function setSlider() {
+        // console.log('wywołanie')
+        for (let i = 0; i < bgTab.length; i++) {
+            let img = document.createElement('img')
+            img.setAttribute('src', `../gfx/main-bg/${bgTab[i]}`)
+            img.setAttribute('id', `img${i}`)
+            img.classList = 'hide'
+            document.getElementById('slider').append(img)
         }
-        setTimeout(changeBgImage, 8000)
+        document.getElementById('img' + imC).classList = 'show'
+        console.log('appended')
+        setInterval(changeBgImage, 8000)
     }
-
+    const changeBgImage = () => {
+        document.getElementById('img' + imC).classList = 'hide'
+        if (imC === bgTab.length - 1) imC = 0
+        else imC++
+        document.getElementById('img' + imC).classList = 'show'
+    }
 </script>

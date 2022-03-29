@@ -46,6 +46,7 @@ app.get("/", function (req, res) {
     }
     res.render('index.hbs', { theme, bgImages });
 })
+
 app.get("/gallery", function (req, res) {
     let theme;
     if (req.cookies.theme == null) {
@@ -56,6 +57,7 @@ app.get("/gallery", function (req, res) {
     }
     res.render('galeria.hbs', { theme, gallery: data.gallery });
 })
+
 app.get("/contact", function (req, res) {
     let theme;
     if (req.cookies.theme == null) {
@@ -66,6 +68,7 @@ app.get("/contact", function (req, res) {
     }
     res.render('contact.hbs', { theme });
 })
+
 app.get("/aboutMe", function (req, res) {
     let theme;
     if (req.cookies.theme == null) {
@@ -85,8 +88,6 @@ app.get("/:session", function (req, res) {
     } else {
         theme = req.cookies.theme
     }
-
-
     const session = req.params.session
     console.log(session)
     res.render('session.hbs', { theme });
