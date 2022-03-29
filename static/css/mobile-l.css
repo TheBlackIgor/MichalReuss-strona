@@ -24,6 +24,9 @@ header{
     margin-top: 50px;
     margin-left: 0;
 }
+.description{
+    padding: 10px;
+}
 /* normal desktop styles */ 
 @media only screen  and (max-device-width: 1000px) and (orientation: portrait)
  {
