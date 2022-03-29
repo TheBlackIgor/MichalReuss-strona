@@ -3,8 +3,9 @@
     <div class="photos">
         {{#each photos}}
         <div class="photo">
-            <a href="/gfx/gallery/{{../title}}v/{{.}}"></a>
-            <img src="/gfx/gallery/{{../title}}/{{.}}" alt="">
+            <a href="/gfx/gallery/{{../title}}/{{.}}" data-lightbox="gallery">
+                <img src="/gfx/gallery/{{../title}}/{{.}}" alt="">
+            </a>
         </div>
         {{/each}}
     </div>

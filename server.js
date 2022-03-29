@@ -4,7 +4,7 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const cookieParser = require('cookie-parser');
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const fs = require('fs')
 const data = require('./static/gfx/gfx.json')
 

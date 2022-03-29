@@ -31,9 +31,11 @@
 }
 .photo:hover img{
     box-shadow: 0px 0px 20px 0px black;
+    transform: scale(1.05);
 }
 .photo a{
-    position: absolute;
     width: 300px;
-    height: 200px;
+    transition: all 0.6s ease;
+    border-radius: 10px;
+    cursor: pointer;   
 }
