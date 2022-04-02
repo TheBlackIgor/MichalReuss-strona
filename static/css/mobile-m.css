@@ -5,5 +5,11 @@
 }
 
 .footer-padding{
-    padding: 30px 5px;
+    padding: 20px 5px;
+}
+.center-footer{
+    font-size: 0.8em;
+}
+.left-footer, .right-footer{
+    margin: 15px 2px;
 }
